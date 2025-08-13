@@ -465,7 +465,7 @@ A:HOVER { Color: #f7be02; }
 
 
 if (!username || username === "Guest") {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 } else {
     document.getElementById("dropdown-username").textContent = username;
 }
@@ -476,11 +476,12 @@ if (!username || username === "Guest") {
 function logout() {
     localStorage.removeItem("username");
     sessionStorage.clear();
-    window.location.replace("login.html");
+    window.location.replace("index.html");
 
 }
 </script>
 </body>
 </html>
+
 
 
