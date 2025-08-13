@@ -98,7 +98,7 @@
 <script>function login(e) {
     e.preventDefault(); let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim(); if(username && password) {
-        localStorage.setItem("username", username); window.location.href = "website.html";} else {
+        localStorage.setItem("username", username); window.location.href = "pages/website.html";} else {
         alert("Please fill in both fields!");
     }
 }
@@ -107,3 +107,4 @@
 </script>
 
 </body></html>
+
