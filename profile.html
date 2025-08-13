@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>PROFILE</title><link rel="icon" type="image/png" href="images.png"><style> body {margin: 0px;
+      background-image: url("bg.jpg");background-size: cover; background-repeat: no-repeat;background-position: center; } 
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+} Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; }
+</style>
+</head>
+<body>
+<header>&nbsp;&nbsp;&nbsp;
+<img src="images.png" style="height: 50px; vertical-align: middle;" >
+&nbsp;&nbsp;<U>Brij Bhushan Lal Public School</U><a href="menu.html" style="float: right; font-family: 'impact'; vertical-align: middle;margin-right: 20px;">MENU</a><img src="pn.png" style="height: 40px; vertical-align: middle; margin-left: 300px;margin-top:1px;" ><p style="float: right;font-family:consolas;top: 2px; position:relative ;vertical-align: middle; margin-right: 35px;margin-top:5px; font-size:25px; padding: none;"><u><a href="Profile.html"><span id="userDisplay"></span></a></u></p>
+</header></head><center><p style="font-family:impact; color:#950c03; font-size:50px;">No data available at the moment.</p></body><script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest";
+</script></html>
+ 

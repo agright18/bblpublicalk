@@ -1,0 +1,484 @@
+<html>
+<head>
+<title>BBL Public School</title>
+<link rel="icon" type="image/png" href="images.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>.user-name {
+  color: #950c03;  
+  font-family: Consolas, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+.user-box:hover{
+  color: #f7be02; 
+}.user-name {
+  color: #333;}
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: white;
+  color: #950c03;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;margin-right:60px;
+}.user-box:hover {
+  background-color: #f7be02;
+}
+
+.user-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-box i {
+  font-size: 16px;
+  color: #950c03;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.dropdown-content p {
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0;
+  color: #950c03;
+}
+
+.dropdown-content a {
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7be02; color:#333;
+}.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px ;
+  background-color: #950c03;
+  color: white;
+  position: relative;
+}.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 50px;
+}
+
+.school-title {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+}.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name a {
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.user-icon {
+  height: 40px;
+}.menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+.menu-container {
+  text-align: right;
+  
+  background-color: #950c03;} .menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: 0.4s;   transition: background 0.3s ease;
+}.menu-btn:hover span {
+  background: #f7be02;
+}.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+} .menu-btn
+}.review-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1000px;
+ margin: 30px auto 10px auto;
+    } .review-card {flex: 0 0 280px;
+      background-color: white;
+      width: 300px;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .review-text {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }.user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .user-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-info .name {
+      font-weight: bold;
+      color: #43b343;
+      font-size: 14px;
+    }
+
+    .user-info .role {
+      font-size: 12px;
+      color: #666;
+    } .marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 5px solid gold;
+  border-bottom: 5px solid #950c03;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-img {
+  height: 300px;
+  width: 500px;
+  margin-right: 15px;
+  vertical-align: middle;
+}@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+} Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; }
+</style>
+</head><script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<body>
+<header class="header">
+  <div class="header-left">
+    <img src="images.png" class="school-logo">
+    <span class="school-title">Brij Bhushan Lal Public School</span>
+  </div>
+
+  <div class="header-right">
+    <div class="user-dropdown">
+  <div class="user-box">
+  <img src="pn.png" alt="User Icon">
+  <span id="userDisplay" class="user-name"></span>
+  <i class="fas fa-caret-down"></i>
+</div>
+  <div class="dropdown-content">
+    <a href="Profile.html">Profile</a>
+    <a href="#">Settings</a>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</div>
+    <a href="menu.html"><div class="menu-btn" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div></a>
+  </div>
+</header><marquee direction=right style="Background-Color:#f7be02;"><p style="font-size: 15px; color: #950c03;">
+<B>Welcome to BBL PUBLIC SCHOOL! Admissions are now open for the academic year 2025-26!</B>
+</p></marquee>
+<div class="marquee-container">
+  <div class="marquee-track">
+    <img src="01.jpg" class="marquee-img">
+    <img src="02.jpg" class="marquee-img">
+    <img src="03.jpg" class="marquee-img">
+    <img src="04.jpg" class="marquee-img"><img src="01.jpg" class="marquee-img">
+    <img src="02.jpg" class="marquee-img">
+    <img src="03.jpg" class="marquee-img">
+    <img src="04.jpg" class="marquee-img">
+  </div>
+</div>
+<hr style="background-color: #950c03; height: 3px;"><div style="position: relative; text-align: center; width: 80%; margin: auto; ">
+  <img src="bg.jpg" alt="Facilities"  style="width: 100%; height: 50px; object-fit: cover; display: block;">
+<h2 style="
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Impact, sans-serif;
+    font-size: 50px;
+    color: #f7be02;
+    text-shadow: 3px 3px 8px black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  ">
+    FACILITIES
+  </h2>
+</div>
+</div><hr style="background-color: #950c03; height: 3px;"><div class="swiper mySwiper">
+  <div class="swiper-wrapper"><div class="swiper-slide fancy-card" style="background-image: url('lib.jpg');">
+      <div class="card-overlay">
+        <h2 style="font-family:Courier New;">LIBRARY</h2>
+        <p>A library is a treasure chest of knowledge waiting to be unlocked.</p>
+      </div>
+    </div>
+<div class="swiper-slide fancy-card" style="background-image: url('sp.jpg');">
+      <div class="card-overlay">
+        <h2 style="font-family:Courier New;">SPORTS</h2>
+        <p>Sports build character, strength, and team spirit beyond the field.</p>
+  
+      </div>
+    </div><div class="swiper-slide fancy-card" style="background-image: url('ms.jpg');">
+      <div class="card-overlay">
+        <h2 style="font-family:Courier New;">ART & MUSIC</h2>
+        <p>Art speaks the soul, and music gives it a voice.</p>
+      </div>
+    </div>
+</div>
+</div><hr style="margin: 20px auto; width: 90%; background-color: #950c03; height: 2px; border: none;">
+<div class="review-section"><div class="review-card">
+  <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i></div><p class="review-text" style="font-family:Courier New;">
+    One of the best schools in bareilly👍
+  </p><div class="user-info">
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User Photo">
+    <div>
+      <div class="name">Regina Miles</div>
+      <div class="role">Designer</div>
+    </div>
+  </div>
+</div> <div class="review-card">
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      <i class="far fa-star"></i>
+    </div>
+    <p class="review-text" style="font-family:Courier New;">
+     A school with values. They are the creators for bright future!
+    </p>
+    <div class="user-info">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User Photo">
+      <div>
+        <div class="name">John Carter</div>
+        <div class="role">Project Manager</div>
+      </div>
+    </div>
+  </div><div class="review-card">
+    <div class="stars">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    </div>
+    <p class="review-text" style="font-family:Courier New;">
+  Best place for children's education.....!
+    </p>
+    <div class="user-info">
+      <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="User Photo">
+      <div>
+        <div class="name">Emily Ross</div>
+        <div class="role">UX Designer</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<center><p style="font-family: 'Cooperlate Gothic Black'; font-size: 30px; color:#950c03; "><u><b>CONTACT US</b></u></p></center><hr style="background-color: #950c03; height: 3px;">
+<center><p style="padding: 20px; font-size: 20px; Background-Color:#f7be02;"><b>EMAIL:-</b>&nbsp; bblalkhelp@gmail.com</p><p style="padding: 20px; font-size: 20px; Background-Color:#f7be02;"><b>PHONE NO.</b>&nbsp; +91 90455 41200</p><A style="color: #950c03; font-family: impact ;"href="https://www.google.com/local/place/fid/0x39a0073dd727e235:0x5a4b28dd6d001c5b/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DhYFh6RO5KyUQaqpdEN1ulw%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D42.348827%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFmhZRmg2Uk81S3lVUWFxcGRFTjF1bHc%3D&sa=X&ved=2ahUKEwiXpKL268GOAxVxamwGHX8iH_AQpx96BAgYEBE">Locate us On map</a></center><footer style="background-color: #950c03;"><center><p style="font-size: 20px; color: white; padding:0px;">© 2025 BBL Public School, Alakhnath Branch. All Rights Reserved.</P><p style="font-size: 20px; color: white; padding: 0px;">Designed and Developed By Abhinav Gangwar VIII A</P>
+</center></footer>  
+<script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest";
+</script><script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2.5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      480: {
+        slidesPerView: 1,
+      }
+    }
+  });
+</script>
+<style>
+
+  .swiper {
+    width: 90%;
+    margin: auto;
+  }
+
+  .fancy-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .card-overlay h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 22px;
+    margin: 0 0 10px;
+    letter-spacing: 1px;
+  }
+
+  .card-overlay p {
+    font-size: 14px;
+    margin: 0 0 8px;
+    opacity: 0.9;
+  }
+
+  .card-overlay span {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+</style><script>
+
+    const username = localStorage.getItem("username");
+
+
+if (!username || username === "Guest") {
+    window.location.href = "login.html";
+} else {
+    document.getElementById("dropdown-username").textContent = username;
+}
+
+    
+  
+</script><script>
+function logout() {
+    localStorage.removeItem("username");
+    sessionStorage.clear();
+    window.location.replace("login.html");
+
+}
+</script>
+</body>
+</html>

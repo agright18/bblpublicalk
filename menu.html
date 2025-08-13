@@ -1,0 +1,295 @@
+<html>
+<head>
+<title>MENU</title><link rel="icon" type="image/png" href="images.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>body {
+  margin: 0;
+  background-image: url("px.jpg"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 30px;
+}.user-name {
+  color: #950c03;
+  font-family: Consolas, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}.user-name {
+  color: #333
+}
+.user-box:hover {
+  color: #f7be02;
+} .card-link {
+      text-decoration: none;
+    }.card-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px;
+    }.card-row {
+  display: flex;
+  gap: 20px;       
+  justify-content: center;
+  margin-top: 20px;
+}
+
+    .card {
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      background-color: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+      transition: transform 0.2s, box-shadow 0.2s; border: 5px solid #950c03;    align:center;flex-wrap: wrap;}
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-top: 5px;
+    }
+
+    .card-title {
+      font-size: 30px;font-family:impact;
+      margin-top: 10px;
+      color: #333;
+    }
+
+ 
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: white;
+  color: #950c03;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;margin-right:60px;
+}.user-box:hover {
+  background-color: #f7be02;
+}
+
+.user-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-box i {
+  font-size: 16px;
+  color: #950c03;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.dropdown-content p {
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0; font-size: 30px;
+  color: #950c03;font-family:consolas;
+}
+
+.dropdown-content a {
+  padding: 8px 17px; font-family:consolas;
+  display: block; font-size: 30px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7be02; color:#333;
+}.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px ;
+  background-color: #950c03;
+  color: white;
+  position: relative;
+}.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 50px;
+}.user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+.school-title {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+}.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name a {
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.user-icon {
+  height: 40px;
+}.user-info .role {
+      font-size: 12px;
+      color: #666;}.menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: 0.4s;  transition: background 0.3s ease;
+}.menu-btn:hover span {
+  background: #f7be02;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+.menu-container {
+  text-align: right;
+  
+  background-color: #950c03;} .menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: 0.4s;.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+ 
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+}
+A{ color: white;}
+A:HOVER { Color: #f7be02; }
+</style></head><body>
+
+<header class="header">
+  <div class="header-left">
+    <img src="images.png" class="school-logo">
+    <span class="school-title">Brij Bhushan Lal Public School</span>
+  </div>
+
+  <div class="header-right">
+    <div class="user-dropdown">
+  <div class="user-box">
+  <img src="pn.png" alt="User Icon">
+  <span id="userDisplay" class="user-name"></span>
+  <i class="fas fa-caret-down"></i>
+</div>
+  <div class="dropdown-content">
+    
+    <a href="Profile.html">Profile</a>
+    <a href="#">Settings</a>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</div>
+    <a href="menu.html"><div class="menu-btn" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div></a>
+  </div>
+</header>
+<div class="card-row"><a href="website.html" class="card-link">
+    <div class="card">
+      <img src="home.png" alt="Icon">
+      <div class="card-title">HOME</div>
+    </div>
+  </a><a href="about.html" class="card-link">
+      <div class="card">
+        <img src="about.png" alt="icon">
+        <div class="card-title">ABOUT</div>
+      </div>
+    </a><a href="Events.html" class="card-link">
+    <div class="card">
+      <img src="events.png" alt="Gallery">
+      <div class="card-title">EVENTS</div>
+    </div>
+  </a><a href="AI CHATBOT.html" class="card-link">
+    <div class="card">
+      <img src="ai.png" alt="Gallery">
+      <div class="card-title">AI CHATBOT</div>
+    </div>
+  </a><a href="calendar.html" class="card-link">
+    <div class="card">
+      <img src="cl.png" alt="Gallery">
+      <div class="card-title">CALENDAR</div>
+    </div>
+  </a>
+  </div></div></body><script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest";
+</script></html>

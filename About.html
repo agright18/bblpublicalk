@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>ABOUT US</title><link rel="icon" type="image/png" href="images.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>.user-name {
+  font-family: Consolas, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}.user-name {
+  color: #333
+}
+.user-box:hover {
+  color: #f7be02;} .user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: white;
+  color: #950c03;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;margin-right:60px;
+}.user-box:hover {
+  background-color: #f7be02;
+}
+
+.user-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-box i {
+  font-size: 16px;
+  color: #950c03;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.dropdown-content p {
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0; font-size: 30px;
+  color: #950c03;font-family:consolas;
+}
+
+.dropdown-content a {
+  padding: 8px 17px; font-family:consolas;
+  display: block; font-size: 30px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7be02; color:#333;
+}.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px ;
+  background-color: #950c03;
+  color: white;
+  position: relative;
+}.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 50px;
+}.user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+.school-title {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+}.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name a {
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.user-icon {
+  height: 40px;
+}.user-info .role {
+      font-size: 12px;
+      color: #666;}.menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: 0.4s;  transition: background 0.3s ease;
+}.menu-btn:hover span {
+  background: #f7be02;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+.menu-container {
+  text-align: right;
+  
+  background-color: #950c03;} .menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: 0.4s;.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+}
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align: center; } Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; }</style></head><body bgcolor=#ffc1bd>
+<header class="header">
+  <div class="header-left">
+    <img src="images.png" class="school-logo">
+    <span class="school-title">Brij Bhushan Lal Public School</span>
+  </div>
+
+  <div class="header-right">
+    <div class="user-dropdown">
+  <div class="user-box">
+  <img src="pn.png" alt="User Icon">
+  <span id="userDisplay" class="user-name"></span>
+  <i class="fas fa-caret-down"></i>
+</div>
+  <div class="dropdown-content">
+    
+    <a href="Profile.html">Profile</a>
+    <a href="#">Settings</a>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</div>
+    <a href="menu.html"><div class="menu-btn" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div></a>
+  </div>
+</header>
+<center><U><p style="font-family: 'algerian'; font-size: 30px; color:#f7be02; Background-color: #950c03;">
+Overview & History
+</U></center><ul type=disc>
+<li><p style="font-family: 	Impact; color: brown; ">Established in 1990 by Sh. Krishna Kumar Agarwal, in memory of his father under the B.B.L. Charitable Trust, with co-founder Sh. Sarvesh Kumar Agarwal</p></li></ul><center><img src="images.jpeg" style="height: 210px; vertical-align: middle;" ><img src="images2.jpeg" style="height: 175px; vertical-align: middle;" ></center><ul type=disc>
+<li><p style="font-family: 	Impact; color: #f7be02; ">Initially located on Alakhnath Road, with additional branches on Pilibhit Road (2008) and Deen Dayal Puram (2002)</p></li></ul><center><img src="03.jpg" style="height: 150px; vertical-align: middle;" ><img src="pilibhit.jpg" style="height: 150px; vertical-align: middle;" ><img src="dd.jpg" style="height: 150px; vertical-align: middle;" ></center><ul type=disc>
+<li><p style="font-family: 	Impact; color: brown; ">The school is affiliated with CBSE and provides Nursery to Class XII education</li>
+<li><p style="font-family: 	Impact; color: #f7be02; ">Focuses on blending traditional Indian values with a modern, technology-driven learning approach</li></ul><center><U><p style="font-family: 'algerian'; font-size: 30px; color:#f7be02; Background-color: #950c03;">INFRASTRUCTURE & FACILITIES</U></center><ul type=disc>
+<li><p style="font-family: 	Impact; color: brown; ">Buildings: Main blocks designed for safety and good lighting, earthquake-resistant .</li><li><p style="font-family: Impact; color: #f7be02; ">Labs: Includes separate Physics, Chemistry, Biology, Maths, Composite, and two Computer Science labs</li><li><p style="font-family: Impact; color: brown; ">Library: Large collection of books, journals, magazines, periodicals, and newspapers (nearly 2,932 books and 1,610 periodicals) .</li></body>><script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest";
+</script></html>
