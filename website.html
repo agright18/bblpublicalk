@@ -4,7 +4,63 @@
 <link rel="icon" type="image/png" href="images.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>.user-name {
+<style>.corner-logo {
+  position: absolute;
+  width: 30px; 
+  height: auto;
+  z-index: 10;
+}
+
+.left-logo {
+  bottom: 10px;
+  left: 10px;
+}
+
+.right-logo {
+  bottom: 8px;
+  right: 10px; width:35px;
+}
+ .modern-slider {
+  width: 100%; 
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}.swiper-button-next, .swiper-button-prev {
+color: #f7be02
+  text-shadow: 0px 0px 5px black;
+}
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  outline: none;
+}.swiper-button-next:hover,
+.swiper-button-prev:hover {
+
+  color: #f7be02;
+}
+
+
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+  background: #f7be02;
+} .social-container {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 9999; 
+} .user-name {
   color: #950c03;  
   font-family: Consolas, monospace;
   font-size: 18px;
@@ -341,17 +397,28 @@ A:HOVER { Color: #f7be02; }
 </header><marquee direction=right style="Background-Color:#f7be02;"><p style="font-size: 15px; color: #950c03;">
 <B>Welcome to BBL PUBLIC SCHOOL! Admissions are now open for the academic year 2025-26!</B>
 </p></marquee><div class="slider-wrapper" style="position: relative;">
-<div class="marquee-container">
-  <div class="marquee-track">
-    <img src="01.jpg" class="marquee-img">
-    <img src="02.jpg" class="marquee-img">
-    <img src="03.jpg" class="marquee-img">
-    <img src="04.jpg" class="marquee-img"><img src="01.jpg" class="marquee-img">
-    <img src="02.jpg" class="marquee-img">
-    <img src="03.jpg" class="marquee-img">
-    <img src="04.jpg" class="marquee-img">
-  </div>
-</div><div class="social-container">
+<div class="swiper modern-slider">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image: url('1.jpg')">
+      <img src="images.png" class="corner-logo left-logo">
+  <img src="flag.png" class="corner-logo right-logo">
+    </div>
+    <div class="swiper-slide" style="background-image: url('2.jpg')">
+    <img src="images.png" class="corner-logo left-logo">
+  <img src="flag.png" class="corner-logo right-logo">
+    </div>
+    <div class="swiper-slide" style="background-image: url('3.jpg')">
+    <img src="images.png" class="corner-logo left-logo">
+  <img src="flag.png" class="corner-logo right-logo">
+    </div>
+    <div class="swiper-slide" style="background-image: url('4.jpg')">
+      <img src="images.png" class="corner-logo left-logo">
+  <img src="flag.png" class="corner-logo right-logo">
+    </div>
+  </div><div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+</div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /><div class="social-container">
   <div class="social-box" id="socialBox">
     <a href="https://www.facebook.com/bblpsbareilly/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.google.com/maps/place/B.B.L.+PUBLIC+SCHOOL,+BAREILLY/@28.3731803,79.4080561,17z/data=!3m1!4b1!4m6!3m5!1s0x39a0073dd727e235:0x5a4b28dd6d001c5b!8m2!3d28.3731803!4d79.4080561!16s%2Fg%2F1hdzl_qjv?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
@@ -552,9 +619,29 @@ function logout() {
     window.location.replace("index.html");
 
 }
+</script><script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper(".modern-slider", {
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false
+  },
+  effect: 'fade',
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
 </script>
 </body>
 </html>
+
 
 
 
