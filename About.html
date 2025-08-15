@@ -1,0 +1,344 @@
+<html>
+<head>
+<title>ABOUT US</title><link rel="icon" type="image/png" href="images.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style> body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+    } .hero {
+        background: url('school-banner.jpg') center/cover no-repeat;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+        font-size: 48px;
+        background: rgba(0,0,0,0.4);
+        padding: 10px 20px;
+        border-radius: 8px;
+    } .founder {
+        display: flex;
+        align-items: center;
+        padding: 40px 10%;
+        background: white;
+        gap: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .founder img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        border: 5px solid #950c03;
+    }
+    .founder-text {
+        flex: 1;
+    }
+    .founder-text h2 {
+        color: #950c03;
+        margin-bottom: 10px;
+    } .history {
+        padding: 50px 10%;
+        text-align: center;
+    }
+    .history h2 {
+        color: #950c03;
+    }
+    .history p {
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.6;
+    } .branches {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 50px 10%;
+    }
+    .branch-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .branch-card:hover {
+        transform: translateY(-5px);
+    }
+    .branch-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .branch-card h3 {
+        padding: 15px;
+        color: #950c03;
+    } footer {
+        background: #950c03;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    } .user-name {
+  font-family: Consolas, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}.user-name {
+  color: #333
+}
+.user-box:hover {
+  color: #f7be02;} .user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: white;
+  color: #950c03;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;margin-right:60px;
+}.user-box:hover {
+  background-color: #f7be02;
+}
+
+.user-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-box i {
+  font-size: 16px;
+  color: #950c03;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.dropdown-content p {
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0; font-size: 30px;
+  color: #950c03;font-family:consolas;
+}
+
+.dropdown-content a {
+  padding: 8px 17px; font-family:consolas;
+  display: block; font-size: 30px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7be02; color:#333;
+}.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px ;
+  background-color: #950c03;
+  color: white;
+  position: relative;
+}.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 50px;
+}.user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+.school-title {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+}.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name a {
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.user-icon {
+  height: 40px;
+}.user-info .role {
+      font-size: 12px;
+      color: #666;}.menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: 0.4s;  transition: background 0.3s ease;
+}.menu-btn:hover span {
+  background: #f7be02;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+.menu-container {
+  text-align: right;
+  
+  background-color: #950c03;} .menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: 0.4s;.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+}
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align: center; } Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; }</style></head><body bgcolor=#ffc1bd>
+<header class="header">
+  <div class="header-left">
+    <img src="images.png" class="school-logo">
+    <span class="school-title">Brij Bhushan Lal Public School</span>
+  </div>
+
+  <div class="header-right">
+    <div class="user-dropdown">
+  <div class="user-box">
+  <img src="pn.png" alt="User Icon">
+  <span id="userDisplay" class="user-name"></span>
+  <i class="fas fa-caret-down"></i>
+</div>
+  <div class="dropdown-content">
+    
+    <a href="profile.html">Profile</a>
+    <a href="#">Settings</a>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</div>
+    <a href="menu.html"><div class="menu-btn" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div></a>
+  </div>
+</header><div class="hero">
+    <h1>About BBL Public School</h1>
+</div>
+
+
+<section class="founder">
+    <img src="founder.jpeg" alt="Late Founder">
+    <div class="founder-text">
+        <h2>Late Krishna Kumar Agarwal </h2>
+        <p>Our respected founder, Late Krishna Kumar Agarwal, envisioned a school that nurtures minds, builds character, and inspires a lifelong love of learning.</p>
+    </div>
+</section><section class="founder">
+    <img src="images.jpeg" alt="Late Founder">
+    <div class="founder-text">
+        <h2>Late Brij Bhushan Lal Agarwal</h2>
+        <p>The Late Shri Brij Bhushan Lal Agarwal, the father of the founder of the school was an enlightened and public spirited citizen of Bareilly. He left for heavenly abode long before the inception of school but his presence is always felt as a guiding star.
+
+</p>
+    </div>
+</section>
+
+
+<section class="history">
+    <h2>Our Journey</h2>
+    <p>Established in [Year], BBL Public School began as a small institution with a vision to provide quality education in Bareilly. Over the years, it has grown into a network of schools with a reputation for excellence in academics, sports, and cultural activities.</p>
+</section>
+
+
+<section class="branches">
+    <div class="branch-card">
+        <img src="alk.jpg" alt="Branch 1">
+        <h3>Alakhnath Branch</h3>
+    </div>
+    <div class="branch-card">
+        <img src="dd.jpg" alt="Branch 2">
+        <h3>Deen Dayal Puram</h3>
+    </div>
+    <div class="branch-card">
+        <img src="pilibhit.jpg" alt="Branch 3">
+        <h3>Pilibhit Road Branch</h3>
+    </div>
+</section>
+</body>><script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest";
+</script><script>
+function logout() {
+    localStorage.removeItem("username");
+    sessionStorage.clear();
+    window.location.replace("login.html");
+
+}
+</script></html>
