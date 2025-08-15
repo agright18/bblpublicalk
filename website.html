@@ -12,7 +12,62 @@
 }
 .user-box:hover{
   color: #f7be02; 
-}.user-name {
+} .social-container {
+  position: absolute; /* positioned relative to parent (slider) */
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 9999; /* ensures it stays above images */
+}
+
+/* Sliding box */
+.social-box {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px 0 0 15px;
+  padding: 10px;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.social-box a {
+  font-size: 20px;
+  color: #950c03;
+  transition: color 0.3s;
+}
+
+.social-box a:hover {
+  color: #f7be02;
+}
+
+/* Arrow button */
+.social-toggle {
+  background: #950c03;
+  color: white;
+  padding: 10px;
+  border-radius: 15px 0 0 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-toggle i {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+/* Open state */
+.social-container.open .social-box {
+  transform: translateX(0);
+}
+
+.social-container.open .social-toggle i {
+  transform: rotate(180deg);
+} .user-name {
   color: #333;}
 .user-box {
   display: flex;
@@ -285,7 +340,7 @@ A:HOVER { Color: #f7be02; }
   </div>
 </header><marquee direction=right style="Background-Color:#f7be02;"><p style="font-size: 15px; color: #950c03;">
 <B>Welcome to BBL PUBLIC SCHOOL! Admissions are now open for the academic year 2025-26!</B>
-</p></marquee>
+</p></marquee><div class="slider-wrapper" style="position: relative;">
 <div class="marquee-container">
   <div class="marquee-track">
     <img src="01.jpg" class="marquee-img">
@@ -296,7 +351,20 @@ A:HOVER { Color: #f7be02; }
     <img src="03.jpg" class="marquee-img">
     <img src="04.jpg" class="marquee-img">
   </div>
+</div><div class="social-container">
+  <div class="social-box" id="socialBox">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://maps.google.com" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+  <div class="social-toggle" id="socialToggle">
+    <i class="fas fa-arrow-left"></i>
+  </div>
 </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</div>
+
 <hr style="background-color: #950c03; height: 3px;"><div style="position: relative; text-align: center; width: 80%; margin: auto; ">
   <img src="bg.jpg" alt="Facilities"  style="width: 100%; height: 50px; object-fit: cover; display: block;">
 <h2 style="
@@ -461,6 +529,10 @@ A:HOVER { Color: #f7be02; }
     opacity: 0.8;
   }
 </style><script>
+document.getElementById("socialToggle").addEventListener("click", function() {
+  document.querySelector(".social-container").classList.toggle("open");
+});
+</script><script>
 
     const username = localStorage.getItem("username");
 
@@ -483,6 +555,7 @@ function logout() {
 </script>
 </body>
 </html>
+
 
 
 
