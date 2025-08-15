@@ -1,0 +1,440 @@
+<html>
+<head><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUIZ</title><link rel="icon" type="image/png" href="images.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>body{margin: 0px;
+      background-image: url("htl.jpg");background-size: cover; background-repeat: no-repeat;background-position: center; } .user-name {
+  font-family: Consolas, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}.user-name {
+  color: #333
+}
+.user-box:hover {
+  color: #f7be02;} .user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: white;
+  color: #950c03;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;margin-right:60px;
+}.user-box:hover {
+  background-color: #f7be02;
+}
+
+.user-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-box i {
+  font-size: 16px;
+  color: #950c03;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.dropdown-content p {
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0; font-size: 30px;
+  color: #950c03;font-family:consolas;
+}
+
+.dropdown-content a {
+  padding: 8px 17px; font-family:consolas;
+  display: block; font-size: 30px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7be02; color:#333;
+}.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px ;
+  background-color: #950c03;
+  color: white;
+  position: relative;
+}.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 50px;
+}.user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+.school-title {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+}.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name a {
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.user-icon {
+  height: 40px;
+}.user-info .role {
+      font-size: 12px;
+      color: #666;}.menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: 0.4s;  transition: background 0.3s ease;
+}.menu-btn:hover span {
+  background: #f7be02;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+.menu-container {
+  text-align: right;
+  
+  background-color: #950c03;} .menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: 0.4s;.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+}
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align: center; }  Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-left">
+    <img src="images.png" class="school-logo">
+    <span class="school-title">Brij Bhushan Lal Public School</span>
+  </div>
+
+  <div class="header-right">
+    <div class="user-dropdown">
+  <div class="user-box">
+  <img src="pn.png" alt="User Icon">
+  <span id="userDisplay" class="user-name"></span>
+  <i class="fas fa-caret-down"></i>
+</div>
+  <div class="dropdown-content">
+    
+    <a href="profile.html">Profile</a>
+    <a href="#">Settings</a>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</div>
+    <a href="menu.html"><div class="menu-btn" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div></a>
+  </div>
+</header><div style="padding: 30px; background: #f7f7f7; min-height: 100vh;"><div class="quiz-wrapper">
+  <div class="quiz-container">
+    <div class="quiz-header">Computer Based Quiz</div>
+    <div class="progress-bar" id="progress"></div>
+    <div class="timer" id="timer">Time: 15s</div>
+    <div class="question" id="question">Question text</div>
+    <div class="options" id="options"></div>
+    <button class="next-btn" id="nextBtn">Next Question</button>
+    <div class="result" id="result"></div>
+  </div>
+</div></div><style>
+  body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 100px); 
+  padding-top: 30px;
+}
+    .quiz-container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        width: 90%;
+        max-width: 600px;
+        overflow: hidden;
+    }
+    .quiz-header {
+        background: #950c03;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .progress-bar {
+        height: 8px;
+        background: #f7be02;
+        width: 0%;
+        transition: width 0.5s;
+    }
+    .timer {
+        text-align: right;
+        padding: 10px;
+        font-weight: bold;
+        color: #950c03;
+    }
+    .question {
+        font-size: 20px;
+        padding: 15px;
+        min-height: 60px;
+    }
+    .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 15px;
+    }
+    .option {
+        background: #eee;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+    .option:hover {
+        background: #f7be02;
+        color: white;
+    }
+    .option.correct {
+        background: #43b343;
+        color: white;
+    }
+    .option.wrong {
+        background: #d9534f;
+        color: white;
+    }
+    .next-btn {
+        background: #950c03;
+        color: white;
+        padding: 12px;
+        border: none;
+        width: 100%;
+        font-size: 18px;
+        cursor: pointer;
+        display: none;
+    }
+    .result {
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }.quiz-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+    overflow: hidden;
+ 
+}</style>
+
+<script>
+const questions = [
+    { question: "What does CPU stand for?", options: ["Central Processing Unit", "Computer Personal Unit", "Central Power Unit", "Core Processing Utility"], answer: 0 },
+    { question: "Which is the brain of the computer?", options: ["RAM", "Motherboard", "CPU", "Hard Disk"], answer: 2 },
+    { question: "Which is the permanent memory?", options: ["ROM", "RAM", "Cache", "Register"], answer: 0 },
+    { question: "What does HTML stand for?", options: ["Hyper Text Markup Language", "High Tech Machine Language", "Hyperlink Text Management Language", "None"], answer: 0 }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let timer;
+let timeLeft = 15;
+
+function loadQuestion() {
+    document.getElementById("result").textContent = "";
+    const q = questions[currentQuestion];
+    document.getElementById("question").textContent = q.question;
+    const optionsDiv = document.getElementById("options");
+    optionsDiv.innerHTML = "";
+    q.options.forEach((opt, index) => {
+        const btn = document.createElement("div");
+        btn.classList.add("option");
+        btn.textContent = opt;
+        btn.onclick = () => selectOption(index);
+        optionsDiv.appendChild(btn);
+    });
+    document.getElementById("progress").style.width = ((currentQuestion) / questions.length) * 100 + "%";
+    document.getElementById("nextBtn").style.display = "none";
+    startTimer();
+}
+
+function startTimer() {
+    timeLeft = 15;
+    document.getElementById("timer").textContent = `Time: ${timeLeft}s`;
+    clearInterval(timer);
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").textContent = `Time: ${timeLeft}s`;
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            lockOptions();
+        }
+    }, 1000);
+}
+
+function selectOption(index) {
+    clearInterval(timer);
+    const q = questions[currentQuestion];
+    const optionsDiv = document.querySelectorAll(".option");
+    if (index === q.answer) {
+        optionsDiv[index].classList.add("correct");
+        score++;
+    } else {
+        optionsDiv[index].classList.add("wrong");
+        optionsDiv[q.answer].classList.add("correct");
+    }
+    lockOptions();
+}
+
+function lockOptions() {
+    const optionsDiv = document.querySelectorAll(".option");
+    optionsDiv.forEach(opt => opt.onclick = null);
+    document.getElementById("nextBtn").style.display = "block";
+}
+
+document.getElementById("nextBtn").onclick = () => {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+        loadQuestion();
+    } else {
+        showResult();
+    }
+};
+
+function showResult() {
+ document.getElementById("question").textContent = "";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("timer").textContent = "";
+    document.getElementById("progress").style.width = "100%";
+    document.getElementById("nextBtn").style.display = "none";
+
+    let totalQuestions = questions.length;
+    let wrong = totalQuestions - score;
+    let percentage = Math.round((score / totalQuestions) * 100);
+
+    document.getElementById("result").innerHTML = `
+        <p>You scored ${score} out of ${totalQuestions} (${percentage}%)</p>
+        <canvas id="scoreChart" style="max-width: 300px; margin: auto;"></canvas>
+    `; const ctx = document.getElementById('scoreChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Correct', 'Wrong'],
+            datasets: [{
+                data: [score, wrong],
+                backgroundColor: ['#43b343', '#d9534f']
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
+
+loadQuestion();
+</script><script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest";
+</script>
+
+</body>
+</html>
