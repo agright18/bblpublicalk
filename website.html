@@ -4,7 +4,24 @@
 <link rel="icon" type="image/png" href="images.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>.contact-section { background: linear-gradient(135deg, #950c03, #f7be02);
+<style>.modern-footer {
+  background: #950c03;
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #f7be02;
+}
+
+.footer-col p{
+  font-size: 14px;
+  margin: 6px 0;
+} .contact-section { background: linear-gradient(135deg, #950c03, #f7be02);
   text-align: center;
   padding: 30px 20px;
 
@@ -605,8 +622,13 @@ A:HOVER { Color: #f7be02; }
       </iframe>
     </div>
   </div>
-</section><footer style="background-color: #950c03;"><center><p style="font-size: 20px; color: white; padding:0px;">© 2025 BBL Public School, Alakhnath Branch. All Rights Reserved.</P><p style="font-size: 20px; color: white; padding: 0px;">Designed and Developed By Abhinav Gangwar VIII A</P>
-</center></footer>  
+</section><footer class="modern-footer">
+  
+
+  <div class="footer-bottom">
+    <p>© 2025 BBL Public School | Designed & Developed by Abhinav Gangwar VIII A</p>
+  </div>
+</footer>    
 <script>
   const username = localStorage.getItem("username");
   document.getElementById("userDisplay").textContent = username || "Guest";
@@ -733,6 +755,7 @@ var swiper = new Swiper(".modern-slider", {
 </script>
 </body>
 </html>
+
 
 
 
