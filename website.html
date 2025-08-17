@@ -4,7 +4,66 @@
 <link rel="icon" type="image/png" href="images.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>.corner-logo {
+<style>.contact-section { background: linear-gradient(135deg, #950c03, #f7be02);
+  text-align: center;
+  padding: 30px 20px;
+
+}.modern-btn {
+  background: #950c03;margin-top:40px;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.modern-btn:hover {
+  background: #f7be02;
+  color: #333;
+}
+ .title p{  font-family: Impact, sans-serif;
+  font-size: 28px;
+  color: #f7be02;
+  margin-bottom: 25px; border:none;border-radius:8px; color: white; padding: 8px 14px;   background: #950c03;}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;  margin-top: 20px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #950c03;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+.contact-card.map {
+  padding: 10px;
+  width: 280px;
+} .corner-logo {
   position: absolute;
   width: 30px; 
   height: auto;
@@ -523,8 +582,30 @@ A:HOVER { Color: #f7be02; }
 </div>
 
 
-<center><p style="font-family: 'Cooperlate Gothic Black'; font-size: 30px; color:#950c03; "><u><b>CONTACT US</b></u></p></center><hr style="background-color: #950c03; height: 3px;">
-<center><p style="padding: 20px; font-size: 20px; Background-Color:#f7be02;"><b>EMAIL:-</b>&nbsp; bblalkhelp@gmail.com</p><p style="padding: 20px; font-size: 20px; Background-Color:#f7be02;"><b>PHONE NO.</b>&nbsp; +91 90455 41200</p><A style="color: #950c03; font-family: impact ;"href="https://www.google.com/local/place/fid/0x39a0073dd727e235:0x5a4b28dd6d001c5b/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DhYFh6RO5KyUQaqpdEN1ulw%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D42.348827%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFmhZRmg2Uk81S3lVUWFxcGRFTjF1bHc%3D&sa=X&ved=2ahUKEwiXpKL268GOAxVxamwGHX8iH_AQpx96BAgYEBE">Locate us On map</a></center><footer style="background-color: #950c03;"><center><p style="font-size: 20px; color: white; padding:0px;">© 2025 BBL Public School, Alakhnath Branch. All Rights Reserved.</P><p style="font-size: 20px; color: white; padding: 0px;">Designed and Developed By Abhinav Gangwar VIII A</P>
+<section class="contact-section"><div class="title">
+  <p>📍 Contact Us</p></div>
+  
+  <div class="contact-container">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p id="schoolEmail" style="font-size:20px">bblalkhelp@gmail.com</p> <button class="modern-btn" onclick="sendMail()">📧 Send Mail</button>
+    </div>
+  
+    
+    <div class="contact-card">
+      <h3>Phone</h3>
+       <p id="schoolPhone" style="font-size:20px">+91 90455 41200</p><button class="modern-btn" onclick="copyPhone()">📋 Copy</button>
+    </div>
+    
+    <div class="contact-card map">
+      <h3>Location</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.632392132234!2d79.4198!3d28.3672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0073dd727e235%3A0x5a4b28dd6d001c5b!2sBrij%20Bhushan%20Lal%20Public%20School!5e0!3m2!1sen!2sin!4v1709300000000"
+        width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section><footer style="background-color: #950c03;"><center><p style="font-size: 20px; color: white; padding:0px;">© 2025 BBL Public School, Alakhnath Branch. All Rights Reserved.</P><p style="font-size: 20px; color: white; padding: 0px;">Designed and Developed By Abhinav Gangwar VIII A</P>
 </center></footer>  
 <script>
   const username = localStorage.getItem("username");
@@ -599,6 +680,17 @@ A:HOVER { Color: #f7be02; }
 document.getElementById("socialToggle").addEventListener("click", function() {
   document.querySelector(".social-container").classList.toggle("open");
 });
+</script><script>function sendMail() {
+  const email = document.getElementById("schoolEmail").innerText;
+  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, "_blank");
+}
+
+function copyPhone() {
+  const phone = document.getElementById("schoolPhone").innerText;
+  navigator.clipboard.writeText(phone).then(() => {
+    alert("📋 Phone number copied!");
+  });
+}
 </script><script>
 
     const username = localStorage.getItem("username");
@@ -641,6 +733,7 @@ var swiper = new Swiper(".modern-slider", {
 </script>
 </body>
 </html>
+
 
 
 
