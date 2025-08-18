@@ -5,6 +5,25 @@
   font-family: Consolas, monospace;
   font-size: 18px;
   font-weight: bold;
+}body.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark header,
+body.dark footer,
+body.dark .settings-container,
+body.dark .card,
+body.dark .review-card,
+body.dark .contact-card {
+  background: #1e1e1e ;
+  color: #f1f1f1 ;
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3 {
+  color: #f7be02 ;
 }.user-name {
   color: #333
 }
@@ -210,7 +229,7 @@ A:HOVER { Color: #f7be02; }
   <div class="dropdown-content">
     
     <a href="profile.html">Profile</a>
-    <a href="#">Settings</a>
+    <a href="settings.html">Settings</a>
     <a href="login.html" onclick="logout()">Logout</a>
   </div>
 </div>
@@ -218,9 +237,17 @@ A:HOVER { Color: #f7be02; }
       <span></span><span></span><span></span>
     </div></a>
   </div>
-</header><div style="display: flex; justify-content: center; padding: 30px;"><iframe src="https://calendar.google.com/calendar/embed?src=gangwarabhinav2012%40gmail.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div></body><script>
+</header><div style="display: flex; justify-content: center; padding: 30px;"><iframe src="https://calendar.google.com/calendar/embed?src=gangwarabhinav2012%40gmail.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div><script>
+
+  window.onload = () => {
+    if (localStorage.getItem("darkmode") === "true") {
+      document.body.classList.add("dark");
+    }
+  };
+</script></body><script>
   const username = localStorage.getItem("username");
   document.getElementById("userDisplay").textContent = username || "Guest";
 </script></html>
 
  
+
