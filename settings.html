@@ -1,0 +1,456 @@
+<html>
+<head>
+<title>PROFILE</title><link rel="icon" type="image/png" href="images.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><style>
+Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; }.menu-btn:hover span {
+  background: #f7be02;
+}body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f7be02, #950c03);
+      color: #333;
+    } body.dark {
+      background: #121212;
+      color: #f1f1f1;
+    }
+    body.dark .settings-container {
+      background: #1e1e1e;
+      color: #f1f1f1;
+    }
+    body.dark h1, body.dark .section h2 {
+      color: #f7be02;
+    }
+    body.dark select {
+      background: #333;
+      color: #fff;
+      border: 2px solid #555;
+    }
+    body.dark .btn-save {
+      background: #f7be02;
+      color: #121212;
+    }
+    body.dark .btn-save:hover {
+      background: #950c03;
+      color: white;
+    }
+
+    .settings-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #950c03;
+      font-size: 36px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #444;
+      border-left: 5px solid #950c03;
+      padding-left: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: border 0.3s ease;
+    }
+
+    select:focus {
+      border-color: #950c03;
+      outline: none;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 10px 0;
+    }
+
+    .toggle input {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-save {
+      background: #950c03;
+      color: white;
+    }
+
+    .btn-save:hover {
+      background: #f7be02;
+      color: #333;
+    }
+
+    .btn-reset {
+      background: #ddd;
+      color: #333;
+    }
+
+    .btn-reset:hover {
+      background: #bbb;
+    } .user-name {
+  font-family: Consolas, monospace;
+  font-size: 18px;
+  font-weight: bold;
+}.user-name {
+  color: #333
+}
+.user-box:hover {
+  color: #f7be02;}
+header { 
+background-color: #950c03;
+color: white;
+padding: 20px; 
+align-items: center; 
+} Body { font-size: 30px; }
+A{ color: white;}
+A:HOVER { Color: #f7be02; } .user-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .user-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-info .name {
+      font-weight: bold;
+      color: #43b343;
+      font-size: 14px;
+    }
+
+    .user-info .role {
+      font-size: 12px;
+      color: #666;} .user-dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: Consolas, monospace;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background-color: white;
+  color: #950c03;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;margin-right:60px;
+}.user-box:hover {
+  background-color: #f7be02;
+}
+
+.user-box img {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.user-box i {
+  font-size: 16px;
+  color: #950c03;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.dropdown-content p {
+  font-weight: bold;
+  padding: 8px 16px;
+  margin: 0;
+  color: #950c03;
+}
+
+.dropdown-content a {
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f7be02; color:#333;
+}.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px ;
+  background-color: #950c03;
+  color: white;
+  position: relative;
+}.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.school-logo {
+  height: 50px;
+}
+
+.school-title {
+  font-family: Impact, sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+}.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name a {
+  font-family: Consolas, monospace;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline; 
+}
+
+.user-icon {
+  height: 40px;
+}.menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+.menu-container {
+  text-align: right;
+  
+  background-color: #950c03;} .menu-btn {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 4px;
+  transition: 0.4s;.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+</style>
+
+</head>
+<body>
+<header class="header">
+  <div class="header-left">
+    <img src="images.png" class="school-logo">
+    <span class="school-title">Brij Bhushan Lal Public School</span>
+  </div>
+
+  <div class="header-right">
+    <div class="user-dropdown"> <div class="user-box">
+  <img src="pn.png" alt="User Icon">
+  <span id="userDisplay" class="user-name"></span>
+  <i class="fas fa-caret-down"></i>
+</div>
+  <div class="dropdown-content">
+    
+    <a href="profile.html">Profile</a>
+    <a href="settings.html">Settings</a>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</div>
+    <a href="menu.html"><div class="menu-btn" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div></a>
+  </div>
+</header>
+  <div class="settings-container">
+    <h1><i class="fas fa-cogs"></i> Settings</h1>
+
+ 
+    <div class="section">
+      <h2><i class="fas fa-paint-brush"></i> Theme Settings</h2>
+      <div class="toggle">
+        <input type="checkbox" id="darkmode">
+        <label for="darkmode">Enable Dark Mode</label>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <h2><i class="fas fa-bell"></i> Notifications</h2>
+      <div class="toggle">
+        <input type="checkbox" id="email-notif" checked>
+        <label for="email-notif">Email Notifications</label>
+      </div>
+      <div class="toggle">
+        <input type="checkbox" id="sms-notif">
+        <label for="sms-notif">SMS Notifications</label>
+      </div>
+      <div class="toggle">
+        <input type="checkbox" id="updates-notif" checked>
+        <label for="updates-notif">School Updates</label>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <h2><i class="fas fa-universal-access"></i> Accessibility</h2>
+      <div class="form-group">
+        <label for="text-size">Text Size</label>
+        <select id="text-size">
+          <option>Small</option>
+          <option selected>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+      <div class="toggle">
+        <input type="checkbox" id="contrast">
+        <label for="contrast">Enable High Contrast Mode</label>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <h2><i class="fas fa-language"></i> Language</h2>
+      <div class="form-group">
+        <label for="language">Choose Language</label>
+        <select id="language">
+          <option selected>English</option>
+          <option>हिन्दी (Hindi)</option>
+          <option>اردو (Urdu)</option>
+          <option>বাংলা (Bengali)</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="btn-container">
+      <button class="btn btn-save">Save Changes</button>
+      <button class="btn btn-reset">Reset</button>
+    </div>
+  </div></body><script>
+  const username = localStorage.getItem("username");
+  document.getElementById("userDisplay").textContent = username || "Guest"; document.getElementById("userDisplay2").textContent = username || "Guest"; 
+
+
+</script><script>
+
+    const darkModeToggle = document.getElementById("darkmode");
+    darkModeToggle.addEventListener("change", () => {
+      document.body.classList.toggle("dark", darkModeToggle.checked);
+      localStorage.setItem("darkmode", darkModeToggle.checked);
+    });
+
+
+    window.onload = () => {
+      if (localStorage.getItem("darkmode") === "true") {
+        document.body.classList.add("dark");
+        darkModeToggle.checked = true;
+      }
+    };
+  </script><script>
+function logout() {
+    localStorage.removeItem("username");
+    sessionStorage.clear();
+    window.location.replace("login.html");
+
+}
+</script></html>
+ 
