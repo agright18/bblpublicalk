@@ -4,6 +4,25 @@
   font-family: Consolas, monospace;
   font-size: 18px;
   font-weight: bold;
+}body.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark header,
+body.dark footer,
+body.dark .settings-container,
+body.dark .card,
+body.dark .review-card,
+body.dark .contact-card {
+  background: #1e1e1e ;
+  color: #f1f1f1 ;
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3 {
+  color: #f7be02 ;
 }.user-name {
   color: #333
 }
@@ -217,7 +236,7 @@ A:HOVER { Color: #f7be02; }.user-info {
   <div class="dropdown-content">
     
     <a href="profile.html">Profile</a>
-    <a href="#">Settings</a>
+    <a href="settings.html">Settings</a>
     <a href="login.html" onclick="logout()">Logout</a>
   </div>
 </div>
@@ -398,6 +417,11 @@ A:HOVER { Color: #f7be02; }.user-info {
 <script>
   const username = localStorage.getItem("username");
   document.getElementById("userDisplay").textContent = username || "Guest";
+</script><script>window.onload = () => {
+    if (localStorage.getItem("darkmode") === "true") {
+      document.body.classList.add("dark");
+    }
+  };
 </script><script>
 function logout() {
     localStorage.removeItem("username");
@@ -406,4 +430,5 @@ function logout() {
 
 }
 </script></html>
+
 
